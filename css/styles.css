@@ -170,7 +170,7 @@ nav {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: var(--white);
+    color: var(--primary-dark);
     position: relative;
     overflow: hidden;
 }
@@ -182,7 +182,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><path fill="white" opacity="0.05" d="M0 300 Q300 200 600 300 T1200 300 L1200 600 L0 600 Z"/></svg>') no-repeat bottom center;
+    background: url("../assets/images/background.jpeg") no-repeat bottom center;
     background-size: cover;
 }
 
