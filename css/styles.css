@@ -199,7 +199,7 @@ nav {
     right: 0;
     bottom: 0;
     background: url("/koku-kitchen/assets/images/Koku_Kitchen_S_logo_strapline.png") no-repeat center center;
-    background-size: cover;
+    background-size: auto 100%;
     background-attachment: scroll;
 }
 
