@@ -80,15 +80,22 @@ nav {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: var(--primary);
-    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
     transition: var(--transition);
+    height: 50px;
 }
 
 .logo:hover {
-    color: var(--primary-dark);
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.logo-img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
 }
 
 .nav-links {
@@ -182,12 +189,14 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("/koku-kitchen/assets/images/background.jpeg") no-repeat bottom center;
-    background-size: cover;
+    background: url("../assets/images/Koku_Kitchen_S_logo_strapline.png") no-repeat center center;
+    background-size: auto 100%;
+    background-attachment: scroll;
 }
 
 .hero-content {
     position: relative;
+    margin-bottom: -20;
     z-index: 1;
     max-width: 900px;
     padding: 2rem;
@@ -425,6 +434,17 @@ footer {
     font-size: 1.3rem;
 }
 
+.footer-logo {
+    margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
+
 .footer-section p {
     color: #ccc;
     margin-bottom: 0.5rem;
@@ -502,6 +522,10 @@ footer {
    ============================================ */
 @media (max-width: 768px) {
     /* Navigation */
+    .logo {
+        height: 45px;
+    }
+    
     .menu-toggle {
         display: flex;
     }
@@ -530,11 +554,13 @@ footer {
 
     /* Hero */
     .hero-content h1 {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+        margin-bottom: 1.2rem;
     }
 
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
+        line-height: 1.5;
     }
 
     /* About */
@@ -570,6 +596,11 @@ footer {
         grid-template-columns: 1fr;
         text-align: center;
     }
+    
+    .footer-logo-img {
+        margin: 0 auto;
+        height: 50px;
+    }
 
     .social-links {
         justify-content: center;
@@ -582,7 +613,7 @@ footer {
 @media (max-width: 480px) {
     /* Navigation */
     .logo {
-        font-size: 1.5rem;
+        height: 40px;
     }
 
     nav {
@@ -592,14 +623,18 @@ footer {
     /* Hero */
     .hero {
         min-height: 500px;
+        height: 80vh;
     }
 
     .hero-content h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
     }
 
     .hero-content p {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        margin-bottom: 2rem;
     }
 
     .cta-button {
