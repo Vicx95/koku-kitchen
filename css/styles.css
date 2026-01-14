@@ -199,7 +199,7 @@ nav {
     right: 0;
     bottom: 0;
     background: url("/koku-kitchen/assets/images/Koku_Kitchen_S_logo_strapline.png") no-repeat center center;
-    background-size: auto 100%;
+    background-size: cover;
     background-attachment: scroll;
 }
 
@@ -570,6 +570,11 @@ footer {
         font-size: 1.2rem;
         line-height: 1.5;
     }
+    
+    /* Adjust background size for tablets */
+    .hero::before {
+        background-size: cover;
+    }
 
     /* About */
     .about-content {
@@ -643,6 +648,12 @@ footer {
         font-size: 1.1rem;
         line-height: 1.5;
         margin-bottom: 2rem;
+    }
+    
+    /* Make background more visible on mobile */
+    .hero::before {
+        background-size: contain;
+        background-position: center center;
     }
 
     .cta-button {
