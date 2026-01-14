@@ -2,16 +2,25 @@
    CSS VARIABLES
    ============================================ */
 :root {
-    --primary: #c41e3a;
-    --primary-dark: #a01729;
-    --primary-light: #e63950;
-    --secondary: #1a1a1a;
-    --accent: #f8f8f8;
-    --text: #333;
-    --text-light: #666;
-    --white: #ffffff;
+    /* Brand Colors from Logo */
+    --primary: #ed1c24;           /* Red - Main brand color */
+    --primary-dark: #c41620;      /* Darker red for hover states */
+    --primary-light: #f44336;     /* Lighter red variant */
+    --accent-orange: #f49040;     /* Orange - Secondary accent */
+    --accent-yellow: #fdcd4c;     /* Yellow - Tertiary accent */
+    
+    /* Neutral Colors */
+    --secondary: #1a1a1a;         /* Dark background */
+    --accent: #f8f8f8;            /* Light background */
+    --text: #333;                 /* Body text */
+    --text-light: #666;           /* Lighter text */
+    --white: #ffffff;             /* White */
+    
+    /* Shadows */
     --shadow: rgba(0, 0, 0, 0.1);
     --shadow-dark: rgba(0, 0, 0, 0.15);
+    --shadow-red: rgba(237, 28, 36, 0.3);  /* Red shadow for buttons */
+    
     --transition: all 0.3s ease;
 }
 
@@ -30,7 +39,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     line-height: 1.6;
     color: var(--text);
     overflow-x: hidden;
@@ -189,14 +198,13 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("../assets/images/Koku_Kitchen_S_logo_strapline.png") no-repeat center center;
+    background: url("/koku-kitchen/assets/images/Koku_Kitchen_S_logo_strapline.png") no-repeat center center;
     background-size: auto 100%;
     background-attachment: scroll;
 }
 
 .hero-content {
     position: relative;
-    margin-bottom: -20;
     z-index: 1;
     max-width: 900px;
     padding: 2rem;
@@ -239,7 +247,7 @@ nav {
 .cta-button:hover {
     background: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(196, 30, 58, 0.3);
+    box-shadow: 0 10px 20px var(--shadow-red);
 }
 
 .cta-button-secondary {
@@ -277,7 +285,7 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: var(--primary);
+    background: linear-gradient(90deg, var(--primary) 0%, var(--accent-orange) 50%, var(--accent-yellow) 100%);
     border-radius: 2px;
 }
 
@@ -430,7 +438,7 @@ footer {
 
 .footer-section h3 {
     margin-bottom: 1rem;
-    color: var(--primary);
+    color: var(--accent-orange);
     font-size: 1.3rem;
 }
 
@@ -482,7 +490,7 @@ footer {
 }
 
 .social-links a:hover {
-    background: var(--primary-light);
+    background: var(--accent-orange);
     transform: translateY(-5px);
 }
 
