@@ -198,7 +198,7 @@ nav {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url("/koku-kitchen/assets/images/Koku_Kitchen_S_logo_strapline.png") no-repeat center center;
+    background: url("../assets/images/Koku_Kitchen_S_logo_strapline.png") no-repeat center center;
     background-size: auto 100%;
     background-attachment: scroll;
 }
@@ -643,7 +643,7 @@ footer {
         height: 85vh;
         display: flex;
         align-items: flex-end;
-        padding-bottom: 3rem;
+        padding-bottom: 15rem;
     }
 
     .hero-content {
