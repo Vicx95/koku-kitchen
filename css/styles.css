@@ -694,7 +694,8 @@ footer {
     }
 
     .hero-logo {
-        max-width: 90%;
+        max-width: none;
+        width: 120%;
         /* lekko podnosi samo logo */
     }
 
