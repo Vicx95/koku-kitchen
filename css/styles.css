@@ -178,40 +178,28 @@ nav {
    ============================================ */
 .hero {
     margin-top: 80px;
-    height: 90vh;
-    min-height: 600px;
-    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), 
-                linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--white);
-    position: relative;
-    overflow: hidden;
-}
+    min-height: calc(100vh - 80px);
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("../assets/images/Koku_Kitchen_S_logo_strapline.png") no-repeat center center;
-    background-size: auto 100%;
-    background-attachment: scroll;
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        linear-gradient(135deg, var(--primary), var(--primary-dark));
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: clamp(2rem, 6vh, 4rem) 1rem;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 1;
     max-width: 900px;
-    padding: 2rem;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 2.5rem;
+    text-align: center;
 }
 
 .hero-content h1 {
@@ -232,6 +220,18 @@ nav {
     text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
+.hero-logo {
+    width: 100%;
+    max-width: 600px;
+}
+
+.hero-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
 /* ============================================
    BUTTONS & CALL TO ACTION
    ============================================ */
@@ -242,16 +242,12 @@ nav {
     color: var(--white);
     border-radius: 50px;
     font-weight: 600;
-    font-size: 1rem;
     transition: var(--transition);
-    animation: fadeInUp 1s ease 0.4s backwards;
-    border: 2px solid var(--primary);
 }
 
 .cta-button:hover {
     background: var(--primary-dark);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px var(--shadow-red);
 }
 
 .cta-button-secondary {
@@ -273,8 +269,9 @@ nav {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-top: 3rem;
     animation: fadeInUp 1s ease 0.6s backwards;
+    flex-wrap: wrap;
+    order: 2;  /* Makes stickers appear SECOND */
 }
 
 .sticker {
@@ -663,52 +660,92 @@ footer {
     }
 
     nav {
-        padding: 1rem;
+        padding: 0.8rem 1rem;
     }
 
     /* Hero */
     .hero {
-        min-height: 600px;
-        height: 85vh;
+        min-height: 105vh;
+        height: auto;
+        margin-top: 70px;
+        padding-top: 3rem;
+        padding-bottom: 3.5rem;
         display: flex;
-        align-items: flex-end;
-        padding-bottom: 15rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-logo {
+        max-width: 90%;
     }
 
     .hero-content {
-        padding: 1.5rem 1rem;
-        margin-top: auto;
+        gap: 2rem;
+    }
+
+    .hero::before {
+        background-size: contain;
+        background-position: center top;
+        opacity: 1;
+    }
+
+    .hero-content {
+        padding: 1rem;
+        margin-top: 0;
+        width: 100%;
+        max-width: 100%;
+        gap: 1.5rem;
     }
 
     .hero-content h1 {
-        font-size: 2.2rem;
+        font-size: 2rem;
         margin-bottom: 0.8rem;
+        line-height: 1.2;
     }
 
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.5;
         margin-bottom: 1.5rem;
     }
-    
-    /* Make background responsive on mobile */
-    .hero::before {
-        background-size: 90% auto;
-        background-position: center 20%;
-    }
 
     .cta-button {
-        padding: 0.8rem 2rem;
-        font-size: 0.9rem;
+        padding: 0.9rem 2rem;
+        font-size: 0.95rem;
+        width: auto;
+        display: inline-block;
+    }
+
+    /* Food Stickers */
+    .food-stickers {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .sticker {
+        width: 70px;
+        height: 70px;
     }
 
     /* About */
     .about-text h3 {
         font-size: 1.5rem;
+        margin-bottom: 0.8rem;
     }
 
     .about-text p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .about-image {
+        height: 250px;
+    }
+
+    .about-image img {
+        max-width: 90%;
+        height: auto;
+        object-fit: contain;
     }
 
     /* Features */
@@ -717,22 +754,50 @@ footer {
         gap: 1.5rem;
     }
 
+    .feature-card {
+        padding: 2rem 1.5rem;
+    }
+
     .feature-icon {
         font-size: 2.5rem;
     }
 
+    .feature-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .feature-card p {
+        font-size: 0.95rem;
+    }
+
     /* Sections */
+    section {
+        padding: 3rem 1rem;
+    }
+
     .section-title {
         font-size: 1.8rem;
+        margin-bottom: 2rem;
     }
 
     /* CTA */
+    .cta-section {
+        padding: 3rem 1rem;
+    }
+
     .cta-content h2 {
         font-size: 1.8rem;
+        margin-bottom: 0.8rem;
     }
 
     .cta-content p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .cta-info {
+        font-size: 0.9rem;
+        margin-top: 1.5rem;
     }
 }
 
@@ -741,8 +806,8 @@ footer {
    ============================================ */
 @media (max-width: 375px) {
     .hero {
-        min-height: 550px;
-        padding-bottom: 2rem;
+        min-height: 105vh;
+        padding-bottom: 1rem;
     }
     
     .hero::before {
@@ -762,6 +827,10 @@ footer {
     .cta-button {
         padding: 0.7rem 1.8rem;
         font-size: 0.85rem;
+    }
+
+    .food-stickers{
+        gap: 0.8rem;
     }
 }
 
