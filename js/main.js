@@ -250,12 +250,6 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ============================================
-// CONSOLE WELCOME MESSAGE
-// ============================================
-console.log('%cWelcome to Koku Kitchen! 🍱', 'color: #c41e3a; font-size: 20px; font-weight: bold;');
-console.log('%cBuilt with ❤️ using best practices', 'color: #666; font-size: 12px;');
-
-// ============================================
 // UTILITY FUNCTIONS
 // ============================================
 /**
