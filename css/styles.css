@@ -695,7 +695,6 @@ footer {
 
     .hero-logo {
         max-width: 90%;
-        margin-top: -10px;
         /* lekko podnosi samo logo */
     }
 
@@ -753,7 +752,7 @@ footer {
     .food-stickers {
         gap: 1rem;
         flex-wrap: wrap;
-        margin-top: 12rem;
+        margin-top: 10rem;
     }
 
     .sticker {
@@ -865,7 +864,7 @@ footer {
 
     .food-stickers {
         gap: 0.8rem;
-        margin-top: 5rem;
+        margin-top: 3.5rem;
     }
 }
 
