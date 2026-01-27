@@ -293,18 +293,10 @@ function debounce(func, wait) {
     };
 }
 
-// ============================================
-// PERFORMANCE MONITORING (Development Only)
-// ============================================
-if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-    window.addEventListener('load', () => {
-        const perfData = performance.getEntriesByType('navigation')[0];
-        console.log('Page Load Time:', perfData.loadEventEnd - perfData.fetchStart, 'ms');
-    });
-}
-
-// ============================================
-// EXPORT FUNCTIONS (if using modules)
-// ============================================
-// Uncomment if using ES6 modules
-// export { toggleMenu, closeMenu, isInViewport, debounce };
+// Set current year in footer
+document.addEventListener('DOMContentLoaded', () => {
+  const yearSpan = document.getElementById('currentYear');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+});
